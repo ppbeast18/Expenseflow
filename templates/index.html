@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transaction Analyzer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+  body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://res.cloudinary.com/dalgfcexp/image/upload/v1755881546/bankimage_o0v2xt.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+
+    .container {
+      display: flex;
+      width: 70%;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(255, 215, 0, 0.2);
+    }
+
+    .upload-section {
+      flex: 1;
+      padding: 40px;
+      border-right: 1px solid rgba(255, 215, 0, 0.2);
+    }
+
+    .upload-section h2 {
+      color: gold;
+      margin-bottom: 25px;
+    }
+
+    .upload-section input[type="file"] {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      background: #222;
+      border: 1px solid #444;
+      color: white;
+      border-radius: 6px;
+      margin-bottom: 25px;
+    }
+
+    .upload-section button {
+      padding: 14px;
+      background-color: gold;
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .upload-section button:hover {
+      background-color: #e0c200;
+    }
+
+    .info-section {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-section h3 {
+      color: gold;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .info-section p {
+      color: #ccc;
+      font-size: 17px;
+      line-height: 1.6;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .upload-section,
+      .info-section {
+        padding: 30px;
+        border-right: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="upload-section">
+      <h2>Upload Bank Statement</h2>
+      <form action="/analyze" method="POST" enctype="multipart/form-data">
+        <input type="file" name="bankfile" accept=".pdf,.csv,.xlsx" required>
+        <button type="submit">Analyze</button>
+      </form>
+    </div>
+    <div class="info-section">
+      <h3>Transaction Analyzer</h3>
+      <p>Upload your bank statement to automatically categorize and visualize your spending. Track your expenses, identify patterns, and make better financial decisions with smart transaction analysis.</p>
+    </div>
+  </div>
+
+</body>
+</html>

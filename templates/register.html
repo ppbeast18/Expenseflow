@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script type="module" src="{{ url_for('static', filename='register.js') }}"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      background-color: #121212;
+      background-image: url('https://images.unsplash.com/photo-1581368125093-969d7f4c43a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .register-container {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(255, 215, 0, 0.15);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: gold;
+      font-size: 28px;
+    }
+
+    .register-container label {
+      display: block;
+      color: gold;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .register-container input[type="text"],
+    .register-container input[type="email"],
+    .register-container input[type="tel"],
+    .register-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    .register-container input::placeholder {
+      color: #aaa;
+    }
+
+    .register-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: gold;
+      border: none;
+      border-radius: 6px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .register-container button:hover {
+      background-color: #e0c200;
+    }
+
+    .register-container .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    .register-container .footer a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      .register-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Register</h2>
+    <form id="register-form">
+      <label for="fullname">Full Name</label>
+      <input type="text" name="fullname" id="fullname" placeholder="Enter full name" required />
+
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" name="mobile" id="mobile" placeholder="Enter mobile number" required />
+
+      <label for="email">Gmail</label>
+      <input type="email" name="email" id="email" placeholder="Enter Gmail address" required />
+
+      <label for="password">Set Password</label>
+      <input type="password" name="password" id="password" placeholder="Set your password" required />
+
+      <button type="submit" id="register-submit">Register</button>
+    </form>
+    <div class="footer">
+      Already have an account? <a href="/">Login</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Environment
+.env
+venv/
+.venv/
+
+# Flask uploads
+uploads/
+instance/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Sensitive project files
+data/
+model/
+
+# Firebase keys in JS
+static/init.js
+static/register.js

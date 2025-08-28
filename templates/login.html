@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to my app</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script type="module" src="{{ url_for('static', filename='register.js') }}"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      background-color: #121212;
+      /* background-image: url('https://plus.unsplash.com/premium_photo-1661372055569-df033925922c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(255, 215, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+      height: 45%;
+    /* width: 420px;
+    background: transparent;
+    border: 2px solid grey;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px; */
+
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: gold;
+      font-size: 28px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    .login-container input::placeholder {
+      color: #aaa;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: gold;
+      border: none;
+      border-radius: 6px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-container button:hover {
+      background-color: #e0c200;
+    }
+
+    .login-container .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    .login-container .footer a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      .login-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" name="email" placeholder="Email" id="email" required />
+      <input type="password" name="password" placeholder="Password" id="password"  required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="footer">
+      Don't have an account? <a href="/register">Sign up</a>
+    </div>
+  </div>
+
+</body>
+</html>
