@@ -1,4 +1,5 @@
 Personal Expense Classification Dashboard
+
 📌 Overview
 This project is a Personal Finance Dashboard built with Flask and Firebase Authentication.
 It allows users to upload their bank transaction data, automatically classifies transactions using an SVM model, and presents clear visual insights into their financial flow.
